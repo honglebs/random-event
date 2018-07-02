@@ -1,18 +1,30 @@
 /* styles */
 /* called by your view template */
 
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+}
+
+main {
+  display:block;
+  height:175px;
+}
+
+header {
+  border-bottom: 1px solid black;
 }
 
 h1 {
-  font-style: italic;
-  color: #373fff;
+  font-weight: bold;
+  color: #000;
 }
 
 .bold {
@@ -23,49 +35,53 @@ p {
   max-width: 600px;
 }
 
-form {
-  margin-bottom: 25px;
-  padding: 15px;
-  background-color: cyan;
-  display: inline-block;
-  width: 100%;
-  max-width: 340px;
-  border-radius: 3px;
-}
-
-input {
-  display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  font-size: 16px;
-}
-
-button {
-  font-size: 16px;
-  border-radius: 3px;
-  background-color: lightgrey;
-  border: 1px solid grey;
-  box-shadow: 2px 2px teal;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: yellow;
-}
-
-button:active {
-  box-shadow: none;
-}
 
 li {
   margin-bottom: 5px;
 }
 
 footer {
-  margin-top: 50px;
   padding-top: 25px;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid black;
+}
+
+footer a {
+  float:left;
+  margin:5px;
+}
+
+.pet-image {
+  height:150px;
+}
+
+.dashboard div {
+  display:block;
+}
+
+.pet-image-container {
+  float:left;
+  padding:10px;
+}
+
+.dashboard {
+  float:left;
+  padding:20px;
+}
+
+.button-container {
+  margin-top:20px;
+}
+
+.button-container button {
+  width: 100px;
+	margin-right: 10px;
+	text-align: center;
+	display: inline-block;
+	float: left;
+  font-size:15px;
+  background-color: #1e2835;
+  border-color: #404853;
+  cursor:pointer;
+  background-image: linear-gradient(to bottom,rgba(246,246,246,.1)0%,rgba(30,40,53,0)66%);
+  color: #fafafa;
 }

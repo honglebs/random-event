@@ -1,42 +1,47 @@
-// client-side js
-// run by the browser each time your view template is loaded
+$(function() {
+  
+  // Called function to update the name, happiness, and weight of our pet in our HTML
+  checkAndUpdatePetInfoInHtml();
 
-console.log('hello world :o');
+  // When each button is clicked, it will "call" function for that button (functions are below)
+  $('.treat-button').click(clickedTreatButton);
+  $('.play-button').click(clickedPlayButton);
+  $('.exercise-button').click(clickedExerciseButton);
+  
+})
 
-// our default array of dreams
-const dreams = [
-  'Find and count some sheep',
-  'Climb a really tall mountain',
-  'Wash the dishes'
-];
+  // Add a variable "pet_info" equal to a dictionary with the name (string), weight (number), and happiness (number) of your pet
 
-// define variables that reference elements on our page
-const dreamsList = document.getElementById('dreams');
-const dreamsForm = document.forms[0];
-const dreamInput = dreamsForm.elements['dream'];
+  function clickedTreatButton() {
+    // Increase pet happiness
+    // Increase pet weight
+    checkAndUpdatePetInfoInHtml();
+  }
+  
+  function clickedPlayButton() {
+    // Increase pet happiness
+    // Decrease pet weight
+    checkAndUpdatePetInfoInHtml();
+  }
+  
+  function clickedExerciseButton() {
+    // Decrease pet happiness
+    // Decrease pet weight
+    checkAndUpdatePetInfoInHtml();
+  }
 
-// a helper function that creates a list item for a given dream
-const appendNewDream = function(dream) {
-  const newListItem = document.createElement('li');
-  newListItem.innerHTML = dream;
-  dreamsList.appendChild(newListItem);
-}
-
-// iterate through every dream and add it to our page
-dreams.forEach( function(dream) {
-  appendNewDream(dream);
-});
-
-// listen for the form to be submitted and add a new dream when it is
-dreamsForm.onsubmit = function(event) {
-  // stop our form submission from refreshing the page
-  event.preventDefault();
-
-  // get dream value and add it to the list
-  dreams.push(dreamInput.value);
-  appendNewDream(dreamInput.value);
-
-  // reset form 
-  dreamInput.value = '';
-  dreamInput.focus();
-};
+  function checkAndUpdatePetInfoInHtml() {
+    checkWeightAndHappinessBeforeUpdating();  
+    updatePetInfoInHtml();
+  }
+  
+  function checkWeightAndHappinessBeforeUpdating() {
+    // Add conditional so if weight is lower than zero, set it back to zero
+  }
+  
+  // Updates your HTML with the current values in your pet_info dictionary
+  function updatePetInfoInHtml() {
+    $('.name').text(pet_info['name']);
+    $('.weight').text(pet_info['weight']);
+    $('.happiness').text(pet_info['happiness']);
+  }
