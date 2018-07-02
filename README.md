@@ -2,7 +2,7 @@
 
 Overview
 ==========
-- See working demo [here](https://cumbersome-vole.glitch.me/
+- See working demo [here](https://cumbersome-vole.glitch.me/)
 - Click `Show Live` above to see your code changes
 - You will write your code in `public/client.js`
 - You can ignore all the other files :)
