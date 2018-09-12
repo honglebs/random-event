@@ -20,7 +20,7 @@ When your pet receives treat, add to its happiness and weight. When your pet exe
 Make sure weight can't go below zero (use conditional)
 
 **More challenges**
-- Add a new action (button, key in dictionary, in HTML)
+- Add a new action (button, key in object, in HTML)
 - Add alerts after each button press with a comment from your pet
 
 Helpful Links
