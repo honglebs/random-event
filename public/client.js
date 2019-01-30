@@ -1,5 +1,7 @@
 $(function() {
-  
+ 
+  // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
+   
   // Called function to update the name, happiness, and weight of our pet in our HTML
   checkAndUpdatePetInfoInHtml();
 
@@ -10,8 +12,6 @@ $(function() {
   
 
 
-  // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
-  
 
   function clickedTreatButton() {
     // Increase pet happiness
